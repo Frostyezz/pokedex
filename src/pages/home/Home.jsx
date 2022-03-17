@@ -15,7 +15,7 @@ function Home() {
   return (
     <>
       <Search
-        pokemons={pokemons}
+        pokemons={data}
         setPokemons={(pokemons) => setPokemons(pokemons)}
       />
       <section className={styles.cardsContainer}>
