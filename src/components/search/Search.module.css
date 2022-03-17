@@ -1,0 +1,12 @@
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search input {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 300px;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
