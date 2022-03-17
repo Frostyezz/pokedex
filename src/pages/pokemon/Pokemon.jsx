@@ -21,7 +21,7 @@ const Pokemon = () => {
 
   return (
     <div className={styles.wrapper}>
-      {pokemon && (
+      {pokemon ? (
         <>
           <div className={styles.img}>
             <img src={pokemon.sprites.front_default} alt={pokemon.name} />
@@ -39,6 +39,11 @@ const Pokemon = () => {
             <Link to="/">Back to all pokemons</Link>
           </div>
         </>
+      ) : (
+        <div className={styles.notFound}>
+          <b>Pokemon not found</b>
+          <Link to="/">Back to all pokemons</Link>
+        </div>
       )}
     </div>
   );

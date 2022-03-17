@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import Home from "./pages/home/Home";
 import Pokemon from "./pages/pokemon/Pokemon";
+import NotFound from "./pages/404/NotFound";
 import Layout from "./components/layout/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -15,6 +16,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/pokemon/:id" element={<Pokemon />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </Layout>
