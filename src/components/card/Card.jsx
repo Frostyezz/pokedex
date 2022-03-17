@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import styles from "./Card.module.css";
 
 const Card = ({ pokemon }) => {
@@ -28,8 +30,15 @@ const Card = ({ pokemon }) => {
         break;
     }
   }, [pokemon]);
+
+  const navigate = useNavigate();
+
   return (
-    <div style={{ backgroundColor: color }} className={styles.wrapper}>
+    <div
+      style={{ backgroundColor: color }}
+      className={styles.wrapper}
+      onClick={() => navigate(`/pokemon/${pokemon.id}`)}
+    >
       <div className={styles.img}>
         <img src={pokemon.sprites.front_default} alt={pokemon.name} />
       </div>

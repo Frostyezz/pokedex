@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import Home from "./pages/home/Home";
+import Pokemon from "./pages/pokemon/Pokemon";
 import Layout from "./components/layout/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -13,6 +14,7 @@ ReactDOM.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/pokemon/:id" element={<Pokemon />} />
         </Routes>
       </BrowserRouter>
     </Layout>
